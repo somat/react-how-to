@@ -1,1 +1,4 @@
-# Dynamic Form Field
+# Array Form Client
+
+* ```npm install ```
+* ```npm start```
