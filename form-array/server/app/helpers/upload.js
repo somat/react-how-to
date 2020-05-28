@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const config = require('app/config')
 const multer = require('multer')
 
 
@@ -10,7 +9,7 @@ var storage = multer.diskStorage({
     const year = String(dateObj.getFullYear())
     const month = String(dateObj.getMonth() + 1)
     const day = String(dateObj.getDate())
-    const dir = path.join(config.upload_dir, year, month, day)
+    const dir = path.join(__dirname + '/../public/uploads/', year, month, day)
 
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
